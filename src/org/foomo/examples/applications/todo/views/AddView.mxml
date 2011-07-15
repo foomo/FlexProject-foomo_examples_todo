@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Group
+	xmlns:fx="http://ns.adobe.com/mxml/2009"
+	xmlns:s="library://ns.adobe.com/flex/spark"
+	xmlns:mx="library://ns.adobe.com/flex/mx"
+	>
+	<fx:Script>
+		<![CDATA[
+			//-----------------------------------------------------------------------------------------
+			// ~ Includes
+			//-----------------------------------------------------------------------------------------
+
+			include 'ViewInclude.as';
+		]]>
+	</fx:Script>
+	<mx:Form verticalCenter="0" horizontalCenter="0">
+		<mx:FormItem label="Description:">
+			<s:TextInput id="descriptionInput" />
+		</mx:FormItem>
+		<mx:FormItem>
+			<s:Button label="Create" click="this.controller.addTodo(this.descriptionInput.text);this.descriptionInput.text=''"/>
+		</mx:FormItem>
+	</mx:Form>
+</s:Group>
